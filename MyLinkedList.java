@@ -20,8 +20,8 @@ public class MyLinkedList{
       end.setNext(val);
       val.setPrev(end);
       end = val;
-
     }
+
     size++;
     return true;
   }
@@ -33,12 +33,13 @@ public class MyLinkedList{
   // public String set(int index, String value);
   //
   public String toString() {
-    String ret = "";
+    String ret = "[";
     Node current = start;
     while (current != null) {
       ret += current.getData() + ", ";
       current = current.getNext();
     }
+    ret += "]";
     return ret;
   }
 
