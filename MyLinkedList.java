@@ -6,17 +6,41 @@ public class MyLinkedList{
     size = 0;
   }
 
-  public int size();
+  public int size() {
+    return size;
+  }
 
-  public boolean add(String value);
+  public boolean add(String value) {
+    Node val = new Node(value);
 
-  public void add(int index, String value);
+    if (size == 0) {
+      start = val;
+      end = val;
+    } else {
+      end.setNext(val);
+      val.setPrev(end);
+      end = val;
 
-  public String get(int index);
+    }
+    size++;
+    return true;
+  }
 
-  public String set(int index, String value);
-
-  public String toString();
+  // public void add(int index, String value);
+  //
+  // public String get(int index);
+  //
+  // public String set(int index, String value);
+  //
+  public String toString() {
+    String ret = "";
+    Node current = start;
+    while (current != null) {
+      ret += current.getData() + ", ";
+      current = current.getNext();
+    }
+    return ret;
+  }
 
  //Any helper method that returns a Node object MUST BE PRIVATE!
 }
