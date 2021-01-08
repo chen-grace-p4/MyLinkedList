@@ -9,8 +9,13 @@ public class Tester{
     test.add(0, "zero");
     test.add(5, "five");
     System.out.println(test);
-    System.out.println(test.get(0));
-    System.out.println(test.get(5));
-    System.out.println(test.get(3));
+    // System.out.println(test.get(0));
+    // System.out.println(test.get(5));
+    // System.out.println(test.get(3));
+
+    test.set(0, "sssero");
+    test.set(5, "fiiiiive");
+    test.set(3, "tree");
+    System.out.println(test);
   }
 }
