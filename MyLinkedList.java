@@ -133,8 +133,36 @@ public class MyLinkedList{
 
   public String remove(int index) {
     Node ret = start;
+
+    if (size == 1) {
+      size = 0;
+      start = null;
+      end = null;
+      size--;
+      return ret.getData();
+    }
+
+    Node current = start;
+
+    if (index == 0) {
+      Node nextNode = current.getNext();
+      nextNode.setPrev(null);
+      start = nextNode;
+      size--;
+      return ret.getData();
+    }
+
+    if (index == size-1) {
+      current = end;
+      ret = end;
+      Node prevNode = current.getPrev();
+      prevNode.setNext(null);
+      end = prevNode;
+      size--;
+      return ret.getData();
+    }
+
     if (index != 0 && index != size-1) {
-      Node current = start;
       for (int i = 0; i < size-1 && current != null; i++) {
         if (i == index) {
           ret = current;
@@ -146,6 +174,7 @@ public class MyLinkedList{
         current = current.getNext();
       }
     }
+    size--;
     return ret.getData();
   }
 

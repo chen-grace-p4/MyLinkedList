@@ -20,6 +20,8 @@ public class Tester{
     // System.out.println(test.toStringReversed());
 
     test.remove(3);
+    test.remove(0);
+    test.remove(3);
     System.out.println(test);
 
     // ////// MR. K'S Tester
