@@ -131,6 +131,24 @@ public class MyLinkedList{
     return ret;
   }
 
+  public String remove(int index) {
+    Node ret = start;
+    if (index != 0 && index != size-1) {
+      Node current = start;
+      for (int i = 0; i < size-1 && current != null; i++) {
+        if (i == index) {
+          ret = current;
+          Node prevNode = current.getPrev();
+          Node nextNode = current.getNext();
+          prevNode.setNext(nextNode);
+          nextNode.setPrev(prevNode);
+        }
+        current = current.getNext();
+      }
+    }
+    return ret.getData();
+  }
+
 
 
  //Any helper method that returns a Node object MUST BE PRIVATE!
