@@ -9,7 +9,19 @@ public class Tester{
     test.add(0, "zero");
     test.add(5, "five");
     System.out.println(test);
+    // System.out.println(test.size());
+
+    MyLinkedList test2 = new MyLinkedList();
+    test2.add("six");
+    test2.add("seven");
+    test2.add("eight");
+    System.out.println(test2);
+
+    test.extend(test2);
+    System.out.println(test);
     System.out.println(test.size());
+    System.out.println(test2);
+    System.out.println(test2.size());
     // // System.out.println(test.get(0));
     // // System.out.println(test.get(5));
     // // System.out.println(test.get(3));
@@ -23,13 +35,13 @@ public class Tester{
     // test.remove(3);
     // test.remove(0);
     // test.remove(3);
-    test.remove(0); test.remove(0); test.remove(0);
-    test.remove(0); test.remove(0);
-    System.out.println(test);
-    System.out.println(test.size());
-    test.remove(0);
-    System.out.println(test);
-    System.out.println(test.size());
+    // test.remove(0); test.remove(0); test.remove(0);
+    // test.remove(0); test.remove(0);
+    // System.out.println(test);
+    // System.out.println(test.size());
+    // test.remove(0);
+    // System.out.println(test);
+    // System.out.println(test.size());
 
     // ////// MR. K'S Tester
     //

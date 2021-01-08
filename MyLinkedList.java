@@ -132,6 +132,7 @@ public class MyLinkedList{
   }
 
   public String remove(int index) {
+    //REMEMBER TO ADD THROW HERE
     Node ret = start;
 
     if (size == 1) {
@@ -175,6 +176,18 @@ public class MyLinkedList{
       }
     }
     return ret.getData();
+  }
+
+  public void extend(MyLinkedList other) {
+    if (this.size > 1 && other.size > 1) {
+      other.start.setPrev(this.end);
+      this.end.setNext(other.start);
+      this.end = other.end;
+      this.size += other.size;
+      other.start = null;
+      other.end = null;
+      other.size = 0;
+    }
   }
 
 
