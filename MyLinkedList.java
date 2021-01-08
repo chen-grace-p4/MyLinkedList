@@ -96,6 +96,9 @@ public class MyLinkedList{
   }
 
   public String toString() {
+    if (size == 0) {
+      return "[]";
+    }
     String ret = "[";
     Node current = start;
     while (current != null) {
