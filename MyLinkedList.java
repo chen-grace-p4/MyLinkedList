@@ -57,8 +57,18 @@ public class MyLinkedList{
     }
   }
 
-  // public String get(int index);
-  //
+  public String get(int index) {
+    Node current = start;
+    for (int i = 0; i < size && current != null; i++) {
+      if (i == index) {
+        return current.getData();
+      } else {
+        current = current.getNext();
+      }
+    }
+    return current.getData();
+  }
+
   // public String set(int index, String value);
   //
   public String toString() {
