@@ -4,7 +4,8 @@ public class Tester{
 
     test.add("one");
     test.add("two");
-    test.add("three");
+    test.add("four");
+    test.add(2, "three");
     System.out.println(test);
   }
 }
