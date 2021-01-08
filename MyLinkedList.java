@@ -113,5 +113,25 @@ public class MyLinkedList{
     return ret;
   }
 
+  public String toStringReversed() {
+    if (size == 0) {
+      return "[]";
+    }
+    String ret = "[";
+    Node current = end;
+    while (current != null) {
+      if (current.getPrev() == null) {
+        ret += current.getData() + "]";
+      }
+      else {
+        ret += current.getData()+ ", ";
+      }
+      current = current.getPrev();
+    }
+    return ret;
+  }
+
+
+
  //Any helper method that returns a Node object MUST BE PRIVATE!
 }

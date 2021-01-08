@@ -17,5 +17,6 @@ public class Tester{
     test.set(5, "fiiiiive");
     test.set(3, "tree");
     System.out.println(test);
+    System.out.println(test.toStringReversed());
   }
 }
