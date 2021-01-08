@@ -29,21 +29,32 @@ public class MyLinkedList{
   public void add(int index, String value){
     Node val = new Node(value);
     Node current = start;
+    int boo = 0;
 
     if (size == index)  {
       add(value);
+      boo = 1;
     }
-    for (int i = 0; i < size && current != null; i++) {
-      if (i == index) {
-        val.setNext(current);
-        val.setPrev(current.getPrev());
-        current.getPrev().setNext(val);
-        current.setPrev(val);
-      } else {
-        current = current.getNext();
+
+    if (boo == 0) {
+      for (int i = 0; i < size && current != null; i++) {
+        if (i == index) {
+          if (index == 0) {
+            val.setNext(current);
+            current.setPrev(val);
+            start = val;
+          } else {
+            val.setNext(current);
+            val.setPrev(current.getPrev());
+            current.getPrev().setNext(val);
+            current.setPrev(val);
+          }
+        } else {
+          current = current.getNext();
+        }
       }
+      size++;
     }
-    size++;
   }
 
   // public String get(int index);
