@@ -36,10 +36,14 @@ public class MyLinkedList{
     String ret = "[";
     Node current = start;
     while (current != null) {
-      ret += current.getData() + ", ";
+      if (current.getNext() == null) {
+        ret += current.getData() + "]";
+      }
+      else {
+        ret += current.getData()+ ", ";
+      }
       current = current.getNext();
     }
-    ret += "]";
     return ret;
   }
 
