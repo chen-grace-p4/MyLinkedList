@@ -138,7 +138,6 @@ public class MyLinkedList{
       size = 0;
       start = null;
       end = null;
-      size--;
       return ret.getData();
     }
 
@@ -170,11 +169,11 @@ public class MyLinkedList{
           Node nextNode = current.getNext();
           prevNode.setNext(nextNode);
           nextNode.setPrev(prevNode);
+          size--;
         }
         current = current.getNext();
       }
     }
-    size--;
     return ret.getData();
   }
 
