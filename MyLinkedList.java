@@ -29,6 +29,10 @@ public class MyLinkedList{
   public void add(int index, String value){
     Node val = new Node(value);
     Node current = start;
+
+    if (size == index)  {
+      add(value);
+    }
     for (int i = 0; i < size && current != null; i++) {
       if (i == index) {
         val.setNext(current);
