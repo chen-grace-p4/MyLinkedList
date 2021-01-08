@@ -62,6 +62,10 @@ public class MyLinkedList{
   }
 
   public String get(int index) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException(index + " is out of bounds or negative.");
+    }
+
     Node current = start;
     for (int i = 0; i < size && current != null; i++) {
       if (i == index) {
