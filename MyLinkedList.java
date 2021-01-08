@@ -27,6 +27,10 @@ public class MyLinkedList{
   }
 
   public void add(int index, String value){
+    if (index < 0 || index > size()) {
+      throw new IndexOutOfBoundsException(index + " is out of bounds or negative.");
+    }
+
     Node val = new Node(value);
     Node current = start;
     int boo = 0;
