@@ -11,17 +11,25 @@ public class Tester{
     System.out.println(test);
     // System.out.println(test.size());
 
-    MyLinkedList test2 = new MyLinkedList();
-    test2.add("six");
-    test2.add("seven");
-    test2.add("eight");
-    System.out.println(test2);
+    // MyLinkedList test2 = new MyLinkedList();
+    // test2.add("six");
+    // test2.add("seven");
+    // test2.add("eight");
+    // System.out.println(test2);
+    //
+    // test.extend(test2);
+    // System.out.println(test);
+    // System.out.println(test.size());
+    // System.out.println(test2);
+    // System.out.println(test2.size());
 
-    test.extend(test2);
+    MyLinkedList test3 = new MyLinkedList();
+    test3.extend(test);
     System.out.println(test);
     System.out.println(test.size());
-    System.out.println(test2);
-    System.out.println(test2.size());
+    System.out.println(test3);
+    System.out.println(test3.size());
+
     // // System.out.println(test.get(0));
     // // System.out.println(test.get(5));
     // // System.out.println(test.get(3));
