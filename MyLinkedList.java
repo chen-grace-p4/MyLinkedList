@@ -187,7 +187,7 @@ public class MyLinkedList{
       other.end = null;
       other.size = 0;
     }
-    if (this.size > 1 && other.size > 1) {
+    else if (this.size >= 1 && other.size >= 1) {
       other.start.setPrev(this.end);
       this.end.setNext(other.start);
       this.end = other.end;

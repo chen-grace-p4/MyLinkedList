@@ -8,8 +8,8 @@ public class Tester{
     test.add(2, "three");
     test.add(0, "zero");
     test.add(5, "five");
-    System.out.println(test);
-    // System.out.println(test.size());
+    System.out.println("test is " + test);
+    System.out.println("test size is " + test.size());
 
     // MyLinkedList test2 = new MyLinkedList();
     // test2.add("six");
@@ -24,11 +24,16 @@ public class Tester{
     // System.out.println(test2.size());
 
     MyLinkedList test3 = new MyLinkedList();
-    test3.extend(test);
-    System.out.println(test);
-    System.out.println(test.size());
-    System.out.println(test3);
-    System.out.println(test3.size());
+    test3.add("hello");
+    System.out.println("test3 is " + test3);
+    System.out.println("test3 size is " + test3.size());
+
+    // test3.extend(test);
+    test.extend(test3);
+    System.out.println("new test is " + test);
+    System.out.println("new test size is " + test.size());
+    System.out.println("new test3 is " + test3);
+    System.out.println("new test3 size is " + test3.size());
 
     // // System.out.println(test.get(0));
     // // System.out.println(test.get(5));
